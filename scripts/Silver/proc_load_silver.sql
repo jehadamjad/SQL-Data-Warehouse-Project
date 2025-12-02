@@ -45,7 +45,7 @@ BEGIN
 		cst_key,
 		cst_firstname,
 		cst_lastname,
-		cst_material_status,
+		cst_marital_status,
 		cst_gndr,
 		cst_create_date)
 
@@ -56,10 +56,10 @@ BEGIN
 	TRIM(cst_lastname) AS cst_lastname,
 
 	--Standardize the status
-	CASE WHEN UPPER(TRIM(cst_material_status)) ='S' THEN 'Single' 
-		 WHEN UPPER(TRIM(cst_material_status)) ='M' THEN 'Married'
+	CASE WHEN UPPER(TRIM(cst_marital_status)) ='S' THEN 'Single' 
+		 WHEN UPPER(TRIM(cst_marital_status)) ='M' THEN 'Married'
 		 ELSE 'n/a' --Here If there is any other value we assign it as not available 
-	END cst_material_status,
+	END cst_marital_status,
 
 	--Make a standerd value for all genders to use it with all tables in the whole project
 	CASE WHEN UPPER(TRIM(cst_gndr)) ='F' THEN 'Female' 
@@ -154,7 +154,7 @@ BEGIN
 		ELSE CAST (CAST(sls_due_dt AS VARCHAR) AS DATE)
 		END AS sls_due_dt,
 
-		CASE WHEN sls_sales	IS NULL OR sls_price <= 0 OR sls_sales != sls_quantity * ABS(sls_price)
+		CASE WHEN sls_sales	IS NULL OR sls_sales <= 0 OR sls_sales != sls_quantity * ABS(sls_price)
 				THEN sls_quantity * ABS(sls_price)
 			ELSE sls_sales
 		END AS sls_sales,
