@@ -1,4 +1,4 @@
-🧠 SQL Data Warehouse Project (ETL + Modeling + Architecture)
+# 🧠 SQL Data Warehouse Project (ETL + Modeling + Architecture)
 
 Welcome to my SQL Data Warehouse Project! 🚀
 This repository showcases a full end-to-end Data Warehouse built from scratch — including ETL development, data modeling, architecture design, and clean repository structuring.
@@ -8,22 +8,23 @@ The project is designed as a practical portfolio piece to demonstrate real-world
 
 ---
 
-🏗 Medallion Data Architecture
+# 🏗 Medallion Data Architecture
 
 This Data Warehouse follows the Medallion Architecture, organizing data into three structured layers:
+
 ![High-Level Architecture](docs/data_architecture.png)
 ---
 
 🔹 1. Bronze Layer – Raw Data Ingestion
 
 - Ingests and stores raw data as-is from source systems (CRM & ERP) into the SQL Server database using automated load scripts.
----
+
 
 🔸 2. Silver Layer – Transformation & Standardization
 
 - Cleans, standardizes, normalizes and enriches data to ensure consistency and quality.
 - Applies business rules and validation logic, with error handling & logging for ETL monitoring 
----
+  
 
 🏆 3. Gold Layer – Business-Ready Data Model
 
@@ -33,7 +34,7 @@ This Data Warehouse follows the Medallion Architecture, organizing data into thr
 ---
 
 # ⚙️ Project Overview
-1. **Data Architecture**: Designing a modern Data Warehouse using the Medallion architecture with **Bronze, silver** and **Gold** layers.
+1. **Data Architecture**: Designing a modern Data Warehouse using the Medallion architecture with **Bronze, Silver** and **Gold** layers.
 2. **ETL Pipeline**: Implements an end-to-end ETL pipeline to extract, transform and load data from source systems into the arehouse
 3. **Data Modeling**: Builds fact and dimension tables optimized for analytical queries & reporting
 
