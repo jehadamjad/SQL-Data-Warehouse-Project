@@ -15,18 +15,18 @@ This Data Warehouse follows the Medallion Architecture, organizing data into thr
 ![High-Level Architecture](docs/data_architecture.png)
 ---
 
-## 🔹 1. Bronze Layer – Raw Data Ingestion
+## 1. Bronze Layer – Raw Data Ingestion
 
 - Ingests and stores raw data as-is from source systems (CRM & ERP) into the SQL Server database using automated load scripts.
 
 
-## 🔸 2. Silver Layer – Transformation & Standardization
+## 2. Silver Layer – Transformation & Standardization
 
 - Cleans, standardizes, normalizes and enriches data to ensure consistency and quality.
 - Applies business rules and validation logic, with error handling & logging for ETL monitoring 
   
 
-## 🏆 3. Gold Layer – Business-Ready Data Model
+## 3. Gold Layer – Business-Ready Data Model
 
 - Builds fact and dimension tables following a star schema
 - Produces business-ready, analytics-ready datasets optimized for reporting  
@@ -39,6 +39,11 @@ This Data Warehouse follows the Medallion Architecture, organizing data into thr
 3. **Data Modeling**: Building fact and dimension tables optimized for analytical queries & reporting
 
 ---
+
+# 📁 Repository Structure
+
+SQL-Data-Warehouse-Project/ ├── Datasets/ │   ├── source_crm/ │   │   ├── cst_ifo.csv           → Customer information from CRM │   │   ├── prd_ifo.csv           → Product information from CRM │   │   └── sales_details.csv     → Sales transactions from CRM │   └── source_erp/ │       ├── CUST-AZ12             → ERP Customer data │       ├── LOC_A101              → ERP Location data │       └── PX_CAT_G1V2           → ERP Product Category data ├── Docs/ │   ├── Data_architecture.png      → High-level architecture diagram │   ├── Data_catalog.md            → Data dictionary & catalog │   ├── Data_flow.png              → ETL/data flow diagram │   └── Data_model.pbg             → Star schema / data model diagram ├── Scripts/ │   ├── Bronze/ │   │   ├── ddl_bronze/           → Bronze layer table definitions │   │   └── proc_load_bronze/     → Stored procedures to load raw data │   ├── Silver/ │   │   ├── ddl_silver/           → Silver layer table definitions │   │   └── proc_load_silver/     → Stored procedures for data transformation │   └── Gold/ │       └── ddl_gold/             → Gold layer table definitions (fact & dimension tables) ├── Test/ │   ├── Quality_checks_silver/     → Data quality checks for Silver layer │   └── Quality_checks_gold/       → Data quality checks for Gold layer └── README.md
+--------------------------
 
 # 🧰 Tools & Technologies
 
