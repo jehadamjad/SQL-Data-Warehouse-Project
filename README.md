@@ -15,18 +15,18 @@ This Data Warehouse follows the Medallion Architecture, organizing data into thr
 ![High-Level Architecture](docs/data_architecture.png)
 ---
 
-🔹 1. Bronze Layer – Raw Data Ingestion
+## 🔹 1. Bronze Layer – Raw Data Ingestion
 
 - Ingests and stores raw data as-is from source systems (CRM & ERP) into the SQL Server database using automated load scripts.
 
 
-🔸 2. Silver Layer – Transformation & Standardization
+## 🔸 2. Silver Layer – Transformation & Standardization
 
 - Cleans, standardizes, normalizes and enriches data to ensure consistency and quality.
 - Applies business rules and validation logic, with error handling & logging for ETL monitoring 
   
 
-🏆 3. Gold Layer – Business-Ready Data Model
+## 🏆 3. Gold Layer – Business-Ready Data Model
 
 - Builds fact and dimension tables following a star schema
 - Produces business-ready, analytics-ready datasets optimized for reporting  
